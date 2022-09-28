@@ -1,21 +1,42 @@
 {% extends 'base.html' %}
 {% load static %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block  title %}{% endblock title %}</title>
-</head>
-<body>
-    
-    {% block nav %}{% endblock nav %}
+{% block title %}
+Pagina Inicial
+{% endblock title %}
+{% block content %}
+{% include 'carrossel.html' %}
 
-    {% block content %}{% endblock content %}
-
-    {% block footer %}{% endblock footer %}
+<div class="container">
     
-</body>
-</html>
+    <div class="row d-flex justify-content-center"  align="center">
+        
+        <div class="col border mt-3">
+            <h1>{{logado}} </h1>
+            <div class='row'>
+                <div class='col'>
+                    <img src="{% static 'imagens/comercio-eletronico.PNG' %}" class='img-fluid' />
+                    <p>{{ content }}</p> 
+                </div>
+            </div>
+            <h1>O Fabuloso Gerador de Lero-lero v2.0 é capaz de gerar qualquer </h1>
+            <p>O Fabuloso Gerador de Lero-lero v2.0 é capaz de gerar qualquer 
+                quantidade de texto vazio e prolixo, ideal para engrossar uma tese de mestrado, 
+                impressionar seu chefe ou preparar discursos capazes de curar a insônia da platéia. 
+                Basta informar um título pomposo qualquer (nos moldes do que está sugerido aí embaixo) 
+                e a quantidade de frases desejada. Voilá! Em dois nano-segundos você terá um texto - 
+                ou mesmo um livro inteiro - pronto para impressão. Ou, se preferir, faça copy/paste 
+                para um editor de texto para formatá-lo mais sofisticadamente. Lembre-se: aparência 
+                é tudo, conteúdo é nada.
+            </p>
+            
+            
+        </div>
+
+        
+        
+    </div>
+</div>
+    
+{% endblock content %}
+    

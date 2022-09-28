@@ -1,0 +1,18 @@
+{% extends 'base.html'%}
+
+{% block content %}
+    <div class="row" align="center">
+        <div class="col">
+            <div class="container border">
+                {% for produto in produtos %}
+                <div class="border mt-2" style="background-color: #DCDCDC">                    
+                    <h1>Lista de produtos</h1>                   
+                    <h2>{{produto.titulo}}</h2>
+                    <p>{{produto.descricao|linebreaks}}</p>
+                    <p>R$: {{produto.preco}}</p>                    
+                </div>
+                {%endfor%}                  
+            </div>
+        </div>
+    </div>
+{% endblock content%}

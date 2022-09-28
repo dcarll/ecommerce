@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <title>{% block  title %}{% endblock title %}</title>
     {% bootstrap_css %}
     
@@ -13,12 +14,13 @@
 
 </head>
 <body>
-    
-    {% block nav %}{% endblock nav %}
+      
+    {% block nav %}{% include 'parciais/_nav.html'%}{% endblock nav %}
 
     {% block content %}{% endblock content %}
 
-    {% block footer %}{% endblock footer %}
+    {% block footer %}{% include 'parciais/_footer.html' %}{% endblock footer %}
+
     {% bootstrap_javascript jquery='full' %}
 </body>
 </html>
