@@ -26,7 +26,7 @@ urlpatterns = [
     path('contato/', contato, name='contato'),
     path('login/', login_page, name='login'),
     path('registrar/', register_page, name='registrar'),
-    path('produto/', include('produtos.urls')),
+    path('produtos/', include('produtos.urls')),
 
     
 

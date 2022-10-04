@@ -27,15 +27,11 @@ def produto_list_view(request):
 '''
 
 #class based view para trazer os detalhes de um determinado produto
-class ProdutodetailView(DetailView):
-
-    #trás todos os produtos do banco de dados, sem filtros
-    queryset = Produto.objects.all()
-    template_name = 'produtos/detalhes.html'
-
-    def get_context_data(self, *args, **kwargs):
-        context = super(ProdutodetailView, self).get_context_data(*args, **kwargs)
-        return context
+class ProdutoDetailView(DetailView):
+	'''Mostra os detalhes de um produto'''
+	model = Produto
+	template_name = 'produtos/detalhes.html'
+	context_object_name = 'produto'
 
 
 #function based view para trazer os detelhes de um determinado produto
