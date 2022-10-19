@@ -1,8 +1,13 @@
 {%extends 'base.html'%}
 
 {% block content %}
-{{ produto.titulo }} <br/>
-{{ produto.descricao }} <br/>
+<div class="container">
+    <div class="detalhes">
+        {{ produto.titulo }} <br/>
+        {{ produto.descricao }} <br/>
+        <img class="img-fluid" src="{{ produto.imagem.url }}" alt="{{produto.titulo}}">
+    </div>
+</div>
 
 {% endblock content %}
 

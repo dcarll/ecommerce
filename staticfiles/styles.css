@@ -1,3 +1,6 @@
+teste
+
+
 body{
     background-color: rgb(241, 241, 236);
 }
@@ -48,4 +51,18 @@ nav{
 .conteudo{    
     margin-top: 50px;
     
+}
+
+.detalhes{
+    -webkit-text-size-adjust: 100%;
+    font-size: 14px;
+    line-height: 20px;
+    color: #0F1111;
+    font-family: "Amazon Ember",Arial,sans-serif;
+    box-sizing: border-box;
+    padding: 14px 18px 18px;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding-top: 0;
+    min-width: 996px;
 }
